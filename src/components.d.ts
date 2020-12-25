@@ -6,30 +6,18 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface GlassDiv {
     }
     interface ProfileCard1 {
         "name": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLGlassDivElement extends Components.GlassDiv, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLGlassDivElement: {
+        prototype: HTMLGlassDivElement;
+        new (): HTMLGlassDivElement;
     };
     interface HTMLProfileCard1Element extends Components.ProfileCard1, HTMLStencilElement {
     }
@@ -38,30 +26,18 @@ declare global {
         new (): HTMLProfileCard1Element;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "glass-div": HTMLGlassDivElement;
         "profile-card-1": HTMLProfileCard1Element;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface GlassDiv {
     }
     interface ProfileCard1 {
         "name"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "glass-div": GlassDiv;
         "profile-card-1": ProfileCard1;
     }
 }
@@ -69,7 +45,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "glass-div": LocalJSX.GlassDiv & JSXBase.HTMLAttributes<HTMLGlassDivElement>;
             "profile-card-1": LocalJSX.ProfileCard1 & JSXBase.HTMLAttributes<HTMLProfileCard1Element>;
         }
     }

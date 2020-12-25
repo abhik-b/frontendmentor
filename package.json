@@ -2,6 +2,7 @@
   "name": "abhikb-frontendmentor",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
+  "author": "abhik-b",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,11 +10,15 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/abhikb-frontendmentor/abhikb-frontendmentor.js",
+  "unpkg": "dist/abhikb-frontendmentor/abhikb-frontendmentor.esm.js",
   "files": [
     "dist/",
     "loader/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhik-b/frontendmentor.git"
+  },
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
